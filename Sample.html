@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pangram Pangram Foundry — Free to Try Quality Fonts and Typefaces</title>
+    <script src="https://kit.fontawesome.com/aeec761082.js" crossorigin="anonymous"></script>
+    <style>
+        html {
+            font-family: Neue Montreal, sans-serif;
+            background-color: rgb(87, 85, 90);
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: grid;
+            color: white;
+            grid-template-columns: 3fr 1fr;
+        }
+
+        #symbol {
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            top: 12.5px;
+            left: 144px;
+        }
+
+        .left {
+            display: inline-block;
+        }
+
+        .right {
+            position: relative;
+            top: 13px;
+        }
+
+        .text {
+            position: absolute;
+            top: 23px;
+            left: 15px;
+            padding: 10px;
+            transition: .5s;
+        }
+
+        .navbar li {
+            display: inline-block;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            transition: .5s;
+            position: relative;
+            top: -798px;
+            left: 2px;
+        }
+
+        .navbar a:hover {
+            color: rgba(215, 207, 218, 0.949);
+        }
+
+        .navbar {
+            display: grid;
+            grid-template-columns: 100px 250px 80px 75px;
+        }
+
+        .cart {
+            position: absolute;
+            top: 13px;
+        }
+
+        footer {
+            background-color: white;
+            color: black;
+            position: relative;
+            top: 800px;
+            width: 100%;
+            height: 1000px;
+        }
+
+        .part1 {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-gap: 60px;
+        }
+
+        .subscription {
+            display: block;
+            font-size: 55px;
+            margin: 20px;
+        }
+
+        .menu {
+            position: relative;
+            top: 35px;
+        }
+
+        .menu ul {
+            position: relative;
+            left: -40px;
+        }
+
+        .support {
+            position: relative;
+            top: 35px;
+        }
+
+        .support ul {
+            position: relative;
+            left: -40px;
+        }
+
+        #email {
+            display: block;
+        }
+
+        .menu li {
+            display: block;
+        }
+
+        .menu a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .menu #Menu-head {
+            color: rgba(137, 133, 142, 0.763);
+        }
+
+        .support li {
+            display: block;
+        }
+
+        .support a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .support a:hover {
+            color: rgb(183, 178, 188);
+        }
+
+        .menu a:hover {
+            color: rgb(183, 178, 188);
+        }
+
+        .support #Support-head {
+            color: rgba(137, 133, 142, 0.763);
+        }
+
+        #email {
+            width: 80%;
+            height: 3vh;
+            /* border: none; */
+            border-top: 2px solid rgba(255, 255, 255, .4);
+            border-right: 2px solid rgba(255, 255, 255, .4);
+            border-left: 2px solid rgba(255, 255, 255, .4);
+            position: relative;
+            top: 19px;
+            left: -6px;
+            margin: 4px;
+            padding: 2px;
+            outline: none;
+        }
+
+        div#Menu-head {
+            position: relative;
+            margin: 4px;
+            padding: 5px;
+            top: -7px;
+            left: -49px;
+            font-size: 18px;
+        }
+
+        div#Support-head {
+            position: relative;
+            margin: 4px;
+            padding: 5px;
+            top: -7px;
+            left: -49px;
+            font-size: 18px;
+        }
+
+        .btn {
+            background-color: white;
+            border: none;
+            font-size: 20px;
+            position: relative;
+            top: -48px;
+            left: 459px;
+        }
+
+        .logo i {
+            position: relative;
+            font-size: 32px;
+            top: 42px;
+            margin: 6px;
+            padding: 6px;
+            left: 16px;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .part3 {
+            position: relative;
+            top: 100px;
+        }
+
+        hr {
+            position: relative;
+            top: 48px;
+        }
+
+        .subscription input::placeholder {
+            font-size: 20px;
+            color: rgb(183, 171, 171);
+        }
+
+        .font span {
+            color: black;
+            position: relative;
+            width: 9px;
+            height: 9px;
+            top: 0.5px;
+            left: 8px;
+            padding: 8px;
+            font-size: 22px;
+        }
+
+        .font {
+            position: relative;
+            top: -54px;
+            left: 11px;
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        .font-area {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 7px;
+        }
+
+        .font-area a {
+            color: rgb(95, 93, 98);
+            text-decoration: none;
+            margin: 9px;
+            padding: 9px;
+            position: relative;
+            top: -15px;
+            left: 13px;
+            font-size: 18px;
+        }
+
+        .font-area a:hover {
+            color: rgb(183, 178, 188);
+        }
+
+        .paycons i {
+            position: relative;
+            font-size: 50px;
+            top: 120px;
+            margin: 9px;
+            padding: 11px;
+            left: 16px;
+        }
+
+        .paycons a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .info {
+            position: relative;
+            color: gray;
+            font-size: 14px;
+        }
+
+        .credit {
+            top: 50.5px;
+            position: relative;
+            left: 1100px;
+        }
+
+        .cpr {
+            top: 67px;
+            left: 750px;
+            position: relative;
+        }
+
+        .info a {
+            color: gray;
+            text-decoration: none;
+        }
+
+        .info a:hover {
+            color: rgb(183, 178, 188);
+        }
+
+        .Menu {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .Menu>li {
+            margin: 0 1rem;
+            overflow: hidden;
+        }
+
+        .menu-button-container {
+            display: none;
+            height: 100%;
+            width: 30px;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        .menu-button,
+        .menu-button::before,
+        .menu-button::after {
+            display: block;
+            background-color: #fff;
+            position: absolute;
+            height: 4px;
+            width: 30px;
+            transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+            border-radius: 2px;
+            top: 52px;
+            right: 45px;
+        }
+
+        .menu-button::before {
+            content: '';
+            margin-top: -8px;
+        }
+
+        .menu-button::after {
+            content: '';
+            margin-top: 8px;
+            visibility: hidden;
+        }
+
+        #menu-toggle:checked+.menu-button-container .menu-button::after {
+            visibility: visible;
+            margin-top: 0px;
+            transform: rotate(-405deg);
+        }
+
+        #menu-toggle:checked+.menu-button-container .menu-button::before {
+            margin-top: 0px;
+            transform: rotate(405deg);
+        }
+
+        #menu-toggle:checked+.menu-button-container .menu-button {
+            background: rgba(255, 255, 255, 0);
+        }
+
+        /* #menu-toggle:checked+.menu-button-container .menu-button::after {
+            margin-top: 0px;
+            transform: rotate(-405deg);
+        } */
+
+
+        .menu-button-container {
+            display: flex;
+        }
+
+        .Menu {
+            position: absolute;
+            top: 0;
+            margin-top: 85px;
+            left: 0;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #menu-toggle~.Menu li {
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        #menu-toggle:checked~.Menu li {
+            border: 1px solid #333;
+            height: 2.5em;
+            padding: 0.5em;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .Menu>li {
+            margin: 0;
+            padding: 0.5em 0;
+            width: 100%;
+            color: black;
+            background-color: white;
+        }
+
+        .Menu>li:not(:last-child) {
+            border-bottom: 1px solid #444;
+        }
+
+        .menu-button::before {
+            position: absolute;
+            top: -7px;
+            left: 0px;
+        }
+
+        .menu-button::after {
+            position: absolute;
+            top: -7px;
+            left: 0px;
+        }
+
+        .slider {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            cursor: grab;
+        }
+
+        .slides {
+            width: 500%;
+            height: 500px;
+            display: flex;
+        }
+
+        .slides img {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .slides input {
+            display: none;
+        }
+
+        .slide {
+            width: 20%;
+            transition: 2s;
+        }
+
+        .manual_nav {
+            position: absolute;
+            width: 100%;
+            margin-top: -40px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .manual-btn {
+            border: 1px solid gray;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            /* transition: all 1s; */
+            display: block;
+            position: relative;
+            top: 288px;
+            right: 292.25px;
+            width: 5px;
+            height: 5px;
+            z-index: 11;
+        }
+
+        .manual-btn:not(:last-child) {
+            margin-right: 28px;
+        }
+
+        .manual-btn:hover {
+            border: 1px solid white;
+            background-color: white;
+        }
+
+        /* #active{
+        background-color: white;
+       } */
+        #radio1:checked~.first {
+            margin-left: 0;
+        }
+
+        #radio2:checked~.first {
+            margin-left: -20%;
+        }
+
+        #radio3:checked~.first {
+            margin-left: -40%;
+        }
+
+        #radio4:checked~.first {
+            margin-left: -60%;
+        }
+
+        #radio5:checked~.first {
+            margin-left: -80%;
+        }
+
+        .auto_nav {
+            position: absolute;
+            display: flex;
+            width: 800px;
+            justify-content: flex-end;
+            top: 280px;
+            right: 300px;
+        }
+
+        .auto_nav div {
+            border: 1px solid white;
+            padding: 5px;
+            border-radius: 50%;
+            justify-content: flex-end;
+            margin-top: 460px;
+            width: 5px;
+            height: 5px;
+            position: relative;
+            top: 8px;
+            left: 8px;
+        }
+
+        .auto_nav div:not(:last-child) {
+            margin-right: 28px;
+        }
+
+        #radio1:checked~.auto_nav .auto-btn1 {
+            background-color: white;
+        }
+
+        #radio2:checked~.auto_nav .auto-btn2 {
+            background-color: white;
+        }
+
+        #radio3:checked~.auto_nav .auto-btn3 {
+            background-color: white;
+        }
+
+        #radio4:checked~.auto_nav .auto-btn4 {
+            background-color: white;
+        }
+
+        #radio5:checked~.auto_nav .auto-btn5 {
+            background-color: white;
+        }
+
+        .display1 {
+            color: white;
+            display: inline-block;
+            z-index: 10;
+            position: absolute;
+            top: 159px;
+            left: 20px;
+            font-family: fragment-glare-regular;
+            animation: standup 3s ease-in-out .5s forwards;
+        }
+        @keyframes standup {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(-15px);
+                opacity: 1;
+            }
+        }
+        .display1 span {
+            font-weight: 400;
+            font-size: 210px;
+        }
+
+        span.\31 {
+            position: relative;
+            top: -130px;
+            left: 147px;
+        }
+
+        span.\32 {
+            position: relative;
+            top: 125px;
+            left: -815px;
+        }
+
+        span.\33 {
+            position: relative;
+            top: -140px;
+            left: 930px;
+        }
+
+        span.\34 {
+            position: relative;
+            top: 100px;
+            left: 400px;
+        }
+
+        .display1 div {
+            border: 1px solid white;
+            position: relative;
+            top: -109px;
+            left: 17px;
+            font-size: 14px;
+            width: 415px;
+            padding: 13px;
+            height: 220px;
+        }
+
+        h2 {
+            font-size: 60px;
+        }
+
+        .display1 p {
+            font-size: 18px;
+        }
+
+        ._btn {
+            filter: invert(100%);
+            border: none;
+            font-size: 20px;
+            position: relative;
+            top: -8px;
+            left: 354px;
+            font-size: 28px;
+            background: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio_btn" id="radio1">
+            <input type="radio" name="radio_btn" id="radio2">
+            <input type="radio" name="radio_btn" id="radio3">
+            <input type="radio" name="radio_btn" id="radio4">
+            <input type="radio" name="radio_btn" id="radio5">
+
+            <div class="first slide">
+                <div class="display1">
+                    <span class="1">Fragment</span>
+                    <span class="2">Såńș*</span>
+                    <span class="3">to→</span>
+                    <span class="4">Sëŗíf‽</span>
+                    <div class="5">
+                        <h2>💠Fragment💠</h2>
+                        <p>
+                            Pangram Pangram's 35th release uses the latest technology, gracefully oscillating between an
+                            elegant, highly contrasted Serif face, a revival mid-serif called Glare, and a strong Sans.
+                        </p>
+                        <button class="_btn" type="submit">→</button>
+                    </div>
+                </div>
+                <img src="img/img01.jpg">
+            </div>
+            <div class="slide">
+                <!-- <div class="display1">
+                    <span class="1">Æ⅞¡ØЖ</span>
+                    <span class="2">Nēüè</span>
+                    <span class="3">§@°</span>
+                    <span class="4">2.0</span>
+                    <div class="5">
+                        <h2>Neue Machina 2.0</h2>
+                        <p>
+                            It now comes in a Inktrap cut as well as a Plain cut for your more subtle designs. Each cut
+                            comes with their corresponding italics and everything is variable for maximum versatility!
+                        </p>
+                        <button class="_btn" type="submit">→</button>
+                    </div>
+                </div> -->
+                <img src="img/img2.jpg">
+            </div>
+            <div class="slide">
+                <!-- <div class="display1">
+                    <span class="1">Radio</span>
+                    <span class="2">Grotesk</span>
+                    <span class="3">2.0!⬎</span>
+                    <span class="4">+Italics</span>
+                    <div class="5">
+                        <h2>Radio Grotesk 2.0!</h2>
+                        <p>
+                            The very popular Radio Grotesk just got even better and bigger! Now with 16 styles, Italics
+                            and Cyrillic.
+                        </p>
+                        <button class="_btn" type="submit">→</button>
+                    </div>
+                </div> -->
+                <img src="img/img03.jpg">
+            </div>
+            <div class="slide">
+                <!-- <div class="display1">
+                    <span class="1">Mori☀</span>
+                    <span class="2">is⏎</span>
+                    <span class="3">③④</span>
+                    <span class="4">Live!</span>
+                    <div class="5">
+                        <h2>Very Mori</h2>
+                        <p>
+                            Mori is a versatile and sophisticated gothic sans serif inspired by contemporary Japanese
+                            design, best suited for editorial, graphic design and branding.
+                        </p>
+                        <button class="_btn" type="submit">→</button>
+                    </div>
+                </div> -->
+                <img src="img/img04.png">
+            </div>
+            <div class="slide">
+                <!-- <div class="display1">
+                    <span class="1">Font</span>
+                    <span class="2">Starter</span>
+                    <span class="3">Pack</span>
+                    <span class="4">4.0!</span>
+                    <div class="5">
+                        <h2>FSP 4.0 is Here!</h2>
+                        <p>
+                            The font starter pack is the best option for every situation from the biggest client to
+                            your close family.
+                        </p>
+                        <button class="_btn" type="submit">→</button>
+                    </div>
+                </div> -->
+                <img src="img/img5.jpeg">
+            </div>
+            <div class="auto_nav">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+            </div>
+        </div>
+        <div class="manual_nav">
+            <label for="radio1" class="manual-btn" onclick="btnClick()"></label>
+            <label for="radio2" class="manual-btn" onclick="btnClick()"></label>
+            <label for="radio3" class="manual-btn" onclick="btnClick()"></label>
+            <label for="radio4" class="manual-btn" onclick="btnClick()"></label>
+            <label for="radio5" class="manual-btn" onclick="btnClick()"></label>
+        </div>
+    </div>
+    <header class="header">
+        <div class="left">
+            <div class="text">Pangram Pangram<div id="symbol"></div>&nbsp;&nbsp;&nbsp;Foundry</div>
+        </div>
+        <div class="right">
+            <ul class="navbar">
+                <li><a href="#">All Fonts</a></li>
+                <li><a href="#">Font Starter Pack</a></li>
+                <li><a href="#" class="cart">Cart<sup>0</sup></a></li>
+                <li><a href="#">
+                    </a></li>
+            </ul>
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="Menu">
+            <li class="one">
+                One
+            </li>
+            <li class="two">
+                Two
+            </li>
+    </header>
+    <footer>
+        <div class="part1">
+            <div class="subscription">
+                Subscribe to our newsletter to stay in touch with the latest.
+                <input type="email" id="email" placeholder="Email address">
+                <button class="btn" type="submit">→</button>
+            </div>
+            <div class="menu">
+                <div id="Menu-head">Menu</div>
+                <ul>
+                    <li><a href="#">All Fonts</a></li><br>
+                    <li><a href="#">Font Starter Pack</a></li><br>
+                    <li><a href="#">The Pangram Paper</a></li><br>
+                    <li><a href="#">Font in Use</a></li><br>
+                    <li><a href="#">About</a></li><br>
+                    <li><a href="#">Cart<sup>0</sup></a></li>
+                </ul>
+            </div>
+            <div class="support">
+                <div id="Support-head">Support</div>
+                <ul>
+                    <li><a href="#">FAQs</a></li><br>
+                    <li><a href="#">EULA</a></li><br>
+                    <li><a href="#">Font Licenses</a></li><br>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="part2">
+            <div class="logo">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="part3">
+            <div class="font">
+                <span>&#9864;</span>
+                &nbsp;&nbsp;Available Fonts
+            </div>
+            <div class="font-area">
+                <div><a href="#">Neue Machina</a></div>
+                <div><a href="#">Mori</a></div>
+                <div><a href="#">Right Sans</a></div>
+                <div><a href="#">Formula</a></div>
+                <div><a href="#">Rader</a></div>
+                <div><a href="#">Right Gothic</a></div>
+                <div><a href="#">Eiko</a></div>
+                <div><a href="#">Editorial New</a></div>
+                <div><a href="#">Fraktion</a></div>
+                <div><a href="#">Neue Montreal</a></div>
+                <div><a href="#">Bitmap Fonts</a></div>
+                <div><a href="#">Object Sans</a></div>
+                <div><a href="#">Supply</a></div>
+                <div><a href="#">Pangram Sans</a></div>
+                <div><a href="#">Telegraf</a></div>
+                <div><a href="#">Cirka</a></div>
+                <div><a href="#">Radio Grotesk</a></div>
+                <div><a href="#">Pangram Sans Rounded</a></div>
+                <div><a href="#">Pier Sans</a></div>
+                <div><a href="#">Migra</a></div>
+                <div><a href="#">Gatwick</a></div>
+                <div><a href="#">Charlevoix Pro</a></div>
+                <div><a href="#">Neue World</a></div>
+                <div><a href="#">Monument Extended</a></div>
+                <div><a href="#">Grafier</a></div>
+                <div><a href="#">Stellar Sans</a></div>
+                <div><a href="#">Right Grotesk</a></div>
+                <div><a href="#">Agrandir</a></div>
+                <div><a href="#">Gosha Sans</a></div>
+                <div><a href="#">Fuji Sans</a></div>
+                <div><a href="#">Hatton</a></div>
+                <div><a href="#">Woodland</a></div>
+                <div><a href="#">Chronos Serif</a></div>
+                <div><a href="#">Casa Stencil</a></div>
+            </div>
+            <div class="paycons">
+                <a href="#"><i class="fa-brands fa-apple-pay"></i></a>
+                <a href="#"><i class="fa-brands fa-cc-paypal"></i></a>
+                <a href="#"><i class="fa-brands fa-cc-mastercard"></i></a>
+                <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
+            </div>
+            <div class="info">
+                <div class="cpr">
+                    Copyright © Pangram Pangram® Foundry
+                </div>
+                <div class="credit">
+                    Website by <a href="#">Locomotive</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    let counter = 1;
+
+    setInterval(function () {
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if (counter > 5) {
+            counter = 1;
+        }
+    }, 6000);
+    let bgwhite = document.getElementsByClassName('manual-btn');
+    function btnClick() {
+
+    }
+</script>
+
+</html>
